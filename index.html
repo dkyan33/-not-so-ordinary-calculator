@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator" class="calculator">
+      <div class="display">
+        <input type="text" id="display" disabled />
+      </div>
+      <div class="buttons">
+        <button class="button" onclick="appendNumber(7)">7</button>
+        <button class="button" onclick="appendNumber(8)">8</button>
+        <button class="button" onclick="appendNumber(9)">9</button>
+        <button class="button" onclick="appendOperator('+')">+</button>
+        <button class="button" onclick="appendNumber(4)">4</button>
+        <button class="button" onclick="appendNumber(5)">5</button>
+        <button class="button" onclick="appendNumber(6)">6</button>
+        <button class="button" onclick="appendOperator('-')">-</button>
+        <button class="button" onclick="appendNumber(1)">1</button>
+        <button class="button" onclick="appendNumber(2)">2</button>
+        <button class="button" onclick="appendNumber(3)">3</button>
+        <button class="button" onclick="appendOperator('*')">*</button>
+        <button class="button" onclick="appendNumber(0)">0</button>
+        <button class="button" onclick="clearDisplay()">C</button>
+        <button class="button" onclick="calculate()">=</button>
+        <button class="button" onclick="appendOperator('/')">/</button>
+      </div>
+    </div>
+
+    <!-- Scary mode elements -->
+    <div id="scaryMode" class="hidden">
+      <div id="glitchText">
+        <h1>You Better Run Now</h1>
+      </div>
+      <div id="imageContainer">
+        <img
+          src="https://images.unsplash.com/photo-1527538079466-b6297ad15363?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="flower"
+          class="movingImage hidden"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1642499211700-1437848ec255?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="rainbow"
+          class="movingImage hidden"
+        />
+      </div>
+    </div>
+
+    <audio id="sound1" src="/door-slam-79889.mp3" preload="auto"></audio>
+    <audio id="sound2" src="/jumpscare-94984.mp3" preload="auto"></audio>
+    <audio id="sound3" src="/man-scream-01.wav" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
